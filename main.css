@@ -1,0 +1,338 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&family=Roboto:wght@400;500;700&display=swap');
+
+html {
+  font-size: 100%;
+}
+
+:root {
+  /* colors */
+  --primary-100: #e0f3ff;
+  --primary-200: #c2e7ff;
+  --primary-300: #94d5ff;
+  --primary-400: #75c9ff;
+  --primary-500: #529ccc;
+  --primary-600: #3d7599;
+  --primary-700: #294e66;
+  --primary-800: #142733;
+  --primary-900: #0a1319;
+
+  /* grey */
+  --grey-50: #fcfeff;
+  --grey-100: #f6fbff;
+  --grey-200: #eaf7ff;
+  --grey-300: #cbdbe6;
+  --grey-400: #b4c2cc;
+  --grey-500: #9eaab3;
+  --grey-600: #717a80;
+  --grey-700: #5a6166;
+  --grey-800: #2d3133;
+  --grey-900: #161819;
+
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --headingFont: 'Roboto', sans-serif;
+  --bodyFont: 'Montserrat', sans-serif;
+  --smallText: 0.7em;
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text-small {
+  font-size: var(--smallText);
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* buttons */
+
+.btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+.btn-hipster {
+  color: var(--primary-500);
+  background: var(--primary-200);
+}
+.btn-hipster:hover {
+  color: var(--primary-200);
+  background: var(--primary-700);
+}
+.btn-block {
+  width: 100%;
+}
+
+/* alerts */
+.alert {
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border-color: transparent;
+  border-radius: var(--borderRadius);
+}
+
+.alert-danger {
+  color: var(--red-dark);
+  background: var(--red-light);
+}
+.alert-success {
+  color: var(--green-dark);
+  background: var(--green-light);
+}
+/* form */
+
+.form {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 3rem auto;
+}
+.form-label {
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--backgroundColor);
+  border: 1px solid var(--grey-200);
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-textarea {
+  height: 7rem;
+}
+::placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+.form-alert {
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+/* alert */
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid var(--grey-400);
+  border-radius: 50%;
+  border-top-color: var(--primary-500);
+  animation: spinner 0.6s linear infinite;
+}
+.loading {
+  margin: 0 auto;
+}
+/* title */
+
+.title {
+  text-align: center;
+}
+
+.title-underline {
+  background: var(--primary-500);
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+  margin-top: -1rem;
+}
+/*
+=============== 
+Color Flipper Project
+===============
+*/
+/* nav */
+nav {
+  background-color: var(--white);
+  height: 4rem;
+  display: grid;
+  align-items: center;
+  box-shadow: var(--shadow-2);
+  justify-content: center;
+}
+.nav-center {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-center h4 {
+  margin-bottom: 0;
+  color: var(--primary-500);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.nav-links {
+  display: flex;
+  gap: 0 1rem;
+}
+nav a {
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: var(--letterSpacing);
+  color: var(--primary-900);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--primary-500);
+}
+
+/*
+=============== 
+Container
+===============
+*/
+
+main {
+  height: calc(100vh - 4rem);
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+
+.container h2 {
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  margin-bottom: 2.5rem;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+.color {
+  color: var(--primary-700);
+  text-transform: uppercase;
+}
+.btn-hero {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--black);
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+  border: 2px solid var(--black);
+  padding: 0.75rem 1.25rem;
+}
+
+.btn-hero:hover {
+  color: var(--white);
+  background: var(--black);
+}
